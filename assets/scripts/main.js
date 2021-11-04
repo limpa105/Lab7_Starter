@@ -13,6 +13,10 @@ const recipes = [
 const recipeData = {} // You can access all of the Recipe Data from the JSON files in this variable
 
 const router = new Router(function () {
+  var element = document.querySelector('.section--recipe-cards');
+  element.classList.add("shown");
+  var element = document.querySelector('.section--recipe-expand');
+  element.classList.add("hidden");
   /** 
    * TODO - Part 1
    * fill in the function to display the home page.
@@ -95,6 +99,7 @@ function createRecipeCards() {
   for (let i = 0; i < recipes.length; i++) {
     const recipeCard = document.createElement('recipe-card');
     recipeCard.data = recipeData[recipes[i]];
+    //router.addPage(recipeData[recipes[i]]['page-name'], bindRecipeCard())
     /**
      * TODO - Part 1
      * Create the new routes for each card with .addPage(), use bindRecipeCard()
@@ -154,6 +159,11 @@ function bindRecipeCard(recipeCard, pageName) {
    * TODO - Part 1
    * Fill in this function as specified in the comment above
    */
+  recipeCard.addEventListener('click', function(){ 
+    router.navigate(pageName);
+
+
+  })
 }
 
 /**

@@ -20,10 +20,7 @@ export class Router {
    *                            visually
    */
   constructor(homeFunc) {
-    /**
-     * TODO Part 1
-     * Fill in this function as specified in the comment above
-     */
+    homeFunc()
   }
 
   /**
@@ -34,6 +31,7 @@ export class Router {
    * @param {Function} pageFunc The function to run when the page is called
    */
   addPage(page, pageFunc) {
+    
     /**
      * TODO Part 1
      * Fill in this function as specified in the comment above
