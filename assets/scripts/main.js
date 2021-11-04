@@ -1,6 +1,6 @@
 // main.js
 
-import { Router } from './router.js';
+import { Router } from 'Router.js';
 
 const recipes = [
   'https://introweb.tech/assets/json/ghostCookies.json',
@@ -57,7 +57,7 @@ function initializeServiceWorker() {
   // code taken from https://developers.google.com/web/fundamentals/primers/service-workers
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
-      navigator.serviceWorker.register('./sw.js').then(function(registration) {
+      navigator.serviceWorker.register('sw.js').then(function(registration) {
         console.log('Succesfully registered Service Worker with the scope: ', registration.scope);
       }, function(err) {
         console.log('Failed to register Service worker: ', err);
