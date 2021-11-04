@@ -32,6 +32,7 @@ export class Router {
    * @param {Function} pageFunc The function to run when the page is called
    */
   addPage(page, pageFunc) {
+    this[page] = pageFunc;
     
     /**
      * TODO Part 1 - Step 2
@@ -58,6 +59,7 @@ export class Router {
      *  1. First, check to see if the function exists, if it doesn't log an error
      *     and return out of the function. 'this' is a global variable, so you can 
      *     check to see if it exists nearly the same way you assigned it
+     * 
      *  2. Create a variable called hash. If page == 'home' set hash to be an empty
      *     string, if page is anything else set it to be the string '#' + page, e.g.
      *     '#ghostCookies'
@@ -66,5 +68,22 @@ export class Router {
      *     and URL + hash to history
      *  4. Finally, call the stored function for the given page
      */
+
+    if(this[page]){
+      if(page == "home"){
+        var hash = ""
+      }
+      else{var hash = "#" + page }
+      if(window.location.hash != hash && !(statePopped)){
+        history.pushState({'recipie': page}, page, window.location.href.split("#")[0] + hash);
+      }
+      this[page]();
+
+    }
+    else{
+      console.log("Error page does not exits");
+      return;
+
+    }
   }
 }
