@@ -2,8 +2,8 @@
 //         so do not move it next to the other scripts
 
 const CACHE_NAME = 'lab-7-starter';
-const urlsToCache = ['/', 'assets/scripts/main.js', 'assets/scripts/Router.js', 'assets/styles/main.css',
-  '/index.html'];
+const urlsToCache = ['assets/scripts/main.js', 'assets/scripts/Router.js', 'assets/styles/main.css',
+  'index.html', 'assets/components/RecipeCard.js', 'assets/components/RecipeExpand.js'];
 
 // Once the service worker has been installed, feed it some initial URLs to cache
 // Using code from 
