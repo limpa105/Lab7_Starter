@@ -6,7 +6,7 @@ const CACHE_NAME = 'lab-7-starter';
 // Once the service worker has been installed, feed it some initial URLs to cache
 self.addEventListener('install', function (event) {
   /**
-   * TODO - Part 2
+   * TODO - Part 2 Step 2
    * Create a function as outlined above
    */
 });
@@ -18,7 +18,7 @@ self.addEventListener('install', function (event) {
  */
 self.addEventListener('activate', function (event) {
   /**
-   * TODO - Part 2
+   * TODO - Part 2 Step 3
    * Create a function as outlined above, it should be one line
    */
 });
@@ -26,7 +26,7 @@ self.addEventListener('activate', function (event) {
 // Intercept fetch requests and store them in the cache
 self.addEventListener('fetch', function (event) {
   /**
-   * TODO - Part 2
+   * TODO - Part 2 Step 4
    * Create a function as outlined above
    */
 });
